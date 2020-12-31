@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Sections - With angled image on right</title>
+    <link rel="stylesheet" href="./vendors/tailwind/dist/tailwind.css" />
+  </head>
+  <body>
+    <div class="pt-6 px-4 sm:px-6 lg:px-8">
+      <nav class="flex flex-wrap items-center justify-between sm:h-10 lg:justify-start">
+        <a href="#">
+          <span class="sr-only">Workflow</span>
+          <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="logo" />
+        </a>
+        <div class="md:hidden">
+          <button
+            id="hamburger"
+            class="bg-white rounded-md p-2 text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            type="button"
+          >
+            <div class="toggle block">
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </div>
+            <div class="toggle hidden">
+              <span class="sr-only">Close main menu</span>
+              <svg class="h-6 w-6" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </div>
+          </button>
+        </div>
+        <div class="toggle hidden w-full md:flex md:w-auto md:ml-10 md:pr-4 md:space-x-8">
+          <a href="#" class="block px-3 py-2 md:px-0 md:py-0 rounded-md md:rounded-none hover:bg-gray-50 md:hover:bg-transparent font-medium text-gray-500 hover:text-gray-900"
+            >Product</a
+          >
+          <a href="#" class="block font-medium text-gray-500 hover:text-gray-900">Features</a>
+          <a href="#" class="block font-medium text-gray-500 hover:text-gray-900">Marketplace</a>
+          <a href="#" class="block font-medium text-gray-500 hover:text-gray-900">Company</a>
+          <a href="#" class="block font-medium text-indigo-600 hover:text-indigo-500">Log in</a>
+        </div>
+      </nav>
+    </div>
+  </body>
+  <script type="text/javascript">
+    document.getElementById("hamburger").onclick = function toggleMenu() {
+      const navToggle = document.getElementsByClassName("toggle");
+      for (let i = 0; i < navToggle.length; i++) {
+        navToggle.item(i).classList.toggle("hidden");
+      }
+    };
+  </script>
+</html>
